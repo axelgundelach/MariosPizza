@@ -1,24 +1,32 @@
-package com.company;
+/*package com.company;
+import java.io.*;
+import java.util.Collection;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Statistik {
-private String FILENAME = "antalpizza.txt";
+    private String FILENAME = "antalpizza.txt";
+    public ArrayList<Pizza> pizzavalg = new ArrayList<Pizza>();
 
-private ArrayList<Pizza> pizzaStat = new ArrayList<Pizza>();
-
-void writeToFile() {
-   Scanner in = new Scanner(System.in);
-    System.out.println("Hvilken pizza blev bestilt?");
-    String pizzaValg = in.nextLine();
-    System.out.println("Hvor mange pizzaer blev bestilt?");
-    String antalPizza = in.nextLine();
-
-    pizzaStat.add(new Pizza(pizzaValg, antalPizza));
-    System.out.println("\n" + pizzaStat + "Tilføjet til statistik fil");
+public int pizzaCounter(String menuNumber) {
+    for (Pizza pizza : pizzavalg) {
+        if (menuNumber.compareTo(pizza.getMenuNumber()) == 0) {
+            int newPizzaCount = pizza.getPizzacount() + 1;
+            return pizza.setPizzacount(newPizzaCount);
+        }
     }
+    return 0;
+}
 
 
+void writeToFile() throws IOException {
+    FileOutputStream fos = new FileOutputStream(FILENAME);
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+    oos.writeObject(pizzavalg);
+    oos.close();
     }
+}
+*/
+
 
 

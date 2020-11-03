@@ -4,10 +4,12 @@ public class Pizza {
 
     String pizza;
     String menuNumber;
+    int pizzacount;
 
-    public Pizza(String menuNumber, String pizza){
+    public Pizza(String menuNumber, String pizza, int pizzacount){
         this.pizza = pizza;
         this.menuNumber = menuNumber;
+        this.pizzacount = pizzacount;
     }
 
     public String getPizza(){
@@ -18,8 +20,17 @@ public class Pizza {
         return menuNumber;
     }
 
+    public int getPizzacount(){
+        return pizzacount;
+    }
+
+    public int setPizzacount(int pizzacount){
+        this.pizzacount = pizzacount;
+        return pizzacount;
+    }
+
     public String toString(){
-        return this.menuNumber + ". " + this.pizza;
+        return this.menuNumber + ". " + this.pizza + ". " + this.getPizzacount();
     }
 
 }
