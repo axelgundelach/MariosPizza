@@ -5,7 +5,7 @@ public class Pizza {
     String pizza;
     String menuNumber;
 
-    public Pizza(String pizza, String menuNumber){
+    public Pizza(String menuNumber, String pizza){
         this.pizza = pizza;
         this.menuNumber = menuNumber;
     }
@@ -19,7 +19,7 @@ public class Pizza {
     }
 
     public String toString(){
-        return this.pizza;
+        return this.menuNumber + ". " + this.pizza;
     }
 
 }
