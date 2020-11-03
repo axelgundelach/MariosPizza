@@ -4,5 +4,4 @@ import java.lang.reflect.Array;
 
 public class Bestillinger {
 
-
 }
