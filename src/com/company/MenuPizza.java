@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class MenuPizza {
 
-    private ArrayList<Pizza> pizzavalg = new ArrayList<Pizza>();
+    public ArrayList<Pizza> pizzavalg = new ArrayList<Pizza>();
 
     public void add(String menuNumber, String PizzaName) {
         Pizza pizza = new Pizza(menuNumber, PizzaName);
@@ -16,11 +16,12 @@ public class MenuPizza {
                 return pizza.getPizza();
             }
         }
+        return "kunne ikke finde pizzaen";
+    }
 
-        public void printAll(){
+        public void printALL(){
             for (Pizza pizza : pizzavalg) {
                 System.out.println(pizza);
             }
         }
     }
-}
