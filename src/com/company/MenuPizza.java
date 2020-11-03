@@ -38,9 +38,8 @@ public class MenuPizza {
         pizzaMenu[29] = "Patatee";
     }
 
-    public MenuPizza(String pizzaName, String pizzaNumber ){
-        this.pizzaName = pizzaName;
-        this.pizzaNumber = pizzaNumber;
+    public String printMenu(){
+        return Arrays.toString(pizzaMenu);
     }
 
     public String getPizzaNumber(){

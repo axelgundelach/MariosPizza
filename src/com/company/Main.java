@@ -3,6 +3,8 @@ package com.company;
 
 public class Main {
 
+    MenuPizza menuPizza = new MenuPizza();
+
     void run() {
         String headerText = "Marios Pizza:"; // Text to print ABOVE menu
         String leadText = "Please choose on of the following options: "; // Lead text to print when asking user to make choice
@@ -40,7 +42,9 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         new Main().run();
+        System.out.println(menuPizza.printMenu());
+
     }
 }
