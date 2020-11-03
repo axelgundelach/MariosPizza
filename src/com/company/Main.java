@@ -3,8 +3,6 @@ package com.company;
 
 public class Main {
 
-    MenuPizza menuPizza = new MenuPizza();
-
     void run() {
         String headerText = "Marios Pizza:"; // Text to print ABOVE menu
         String leadText = "Please choose on of the following options: "; // Lead text to print when asking user to make choice
@@ -22,6 +20,7 @@ public class Main {
             switch (choice) {
                 case 1:
                     System.out.println("You chose ONE");
+                    Print();
                     break;
                 case 2:
                     System.out.println("You chose 2. Pizza menu");
@@ -42,16 +41,15 @@ public class Main {
         }
     }
 
+    MenuPizza menuPizza = new MenuPizza();
+
     public static void main(String[] args) {
-        Main main =  new Main();
-        new Main().run();
+        Main main = new Main();
         main.Print();
-
-
-
+        new Main().run();
     }
 
     public void Print(){
-        System.out.println(menuPizza.printMenu());
+        System.out.print(menuPizza.printMenu());
     }
 }
