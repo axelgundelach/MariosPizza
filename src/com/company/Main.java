@@ -1,5 +1,6 @@
 package com.company;
 
+
 public class Main {
 
     void run() {
@@ -21,9 +22,11 @@ public class Main {
                     System.out.println("You chose ONE");
                     break;
                 case 2:
+                    System.out.println("You chose 2. Pizza menu");
                     // pizza menu
                     break;
                 case 3:
+                    System.out.println("Hey Mario, Heres your statistics");
                     //statistic
                     break;
                 case 9:
