@@ -42,9 +42,16 @@ public class Main {
         }
     }
 
-    public  void main(String[] args) {
+    public static void main(String[] args) {
+        Main main =  new Main();
         new Main().run();
-        System.out.println(menuPizza.printMenu());
+        main.Print();
 
+
+
+    }
+
+    public void Print(){
+        System.out.println(menuPizza.printMenu());
     }
 }
