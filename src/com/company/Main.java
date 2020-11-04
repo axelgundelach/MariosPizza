@@ -1,10 +1,12 @@
 package com.company;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
     MenuPizza pizza = new MenuPizza();
+    filecreator goddag = new filecreator();
 
 
     void run() {
@@ -14,7 +16,7 @@ public class Main {
         String[] menuItems = { "1. Choose ONE", "2. Choose TWO", "3. Choose THREE", "9. QUIT" };
         boolean run = true; // Don't change!
         int choice = -1; // Don't change!
-        printPizzaMenu();
+        //printPizzaMenu();
         while (run) {
             Menu menu = new Menu(headerText, leadText, menuItems); // Create new menu instance
             menu.printMenu(); // Print menu
@@ -45,14 +47,14 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Main main = new Main();
         main.file();
-        main.printPizzaMenu();
+
         main.run();
 
     }
-    public void printPizzaMenu(){
+   /*public void printPizzaMenu(){
         pizza.add("1", "Magarita", 0);
         pizza.add("2", "Vesuvio", 0);
         pizza.add("3", "Capricciossa", 0);
@@ -84,12 +86,17 @@ public class Main {
         pizza.add("30", "Vegetarinarr", 0);
         pizza.printALL();
     }
-
-    public void file(){
+*/
+   /* public void file(){
         try {
             pizza.writeToFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    */
+
+    public void file() throws FileNotFoundException {
+        goddag.filereader();
     }
 }

@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 import java.io.*;
 import java.util.Collection;
 import java.util.Scanner;
@@ -29,4 +29,4 @@ void writeToFile() throws IOException {
 
 
 
-
+*/
