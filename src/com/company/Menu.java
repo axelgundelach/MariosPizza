@@ -36,5 +36,4 @@ public class Menu {
             }
             return choice;
         }
-
     }

@@ -1,5 +1,8 @@
 package com.company;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Pizza {
 
     String pizza;
@@ -30,7 +33,7 @@ public class Pizza {
     }
 
     public String toString(){
-        return this.menuNumber + ". " + this.pizza + ". " + this.getPizzacount();
+        return this.menuNumber + ". " + this.pizza;
     }
 
 }
