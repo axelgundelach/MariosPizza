@@ -37,6 +37,7 @@ public class Main {
                     break;
                 case 4:
                     farvel.Readorder();
+                    break;
                 case 9:
                     System.out.println("Quitting.");
                     run = false;
