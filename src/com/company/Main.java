@@ -47,9 +47,10 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        new Main().file();
-        new Main().printPizzaMenu();
-        new Main().run();
+        main.file();
+        main.printPizzaMenu();
+        main.run();
+
     }
     public void printPizzaMenu(){
         pizza.add("1", "Magarita", 0);

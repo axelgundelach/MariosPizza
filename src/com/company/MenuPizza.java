@@ -1,4 +1,5 @@
 package com.company;
+import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -41,8 +42,8 @@ public class MenuPizza {
 
     void writeToFile() throws IOException {
         FileOutputStream fos = new FileOutputStream(FILENAME);
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(pizzavalg);
+        DataOutputStream oos = new DataOutputStream(fos);
+        oos.writeUTF(String.valueOf(pizzavalg));
         oos.close();
     }
 

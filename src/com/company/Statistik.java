@@ -1,4 +1,4 @@
-/*package com.company;
+package com.company;
 import java.io.*;
 import java.util.Collection;
 import java.util.Scanner;
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Statistik {
     private String FILENAME = "antalpizza.txt";
-    public ArrayList<Pizza> pizzavalg = new ArrayList<Pizza>();
 
-public int pizzaCounter(String menuNumber) {
+
+public int pizzaCounter(int menuNumber, ArrayList<Pizza> pizzavalg) {
     for (Pizza pizza : pizzavalg) {
         if (menuNumber.compareTo(pizza.getMenuNumber()) == 0) {
             int newPizzaCount = pizza.getPizzacount() + 1;
@@ -26,7 +26,7 @@ void writeToFile() throws IOException {
     oos.close();
     }
 }
-*/
+
 
 
 
