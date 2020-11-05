@@ -15,6 +15,7 @@ public class  PrintOrdre {
         FileWriter fileWriter = new FileWriter("Ordrer.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
         printWriter.write(nummer.Getline(menuNumber));
+        printWriter.flush();
         printWriter.close();
     }
 

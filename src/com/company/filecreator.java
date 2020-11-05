@@ -30,21 +30,6 @@ public void filestat(){
             e.printStackTrace();
         }
     }
-
-    public void fileOdre(){
-        try {
-            File myObj = new File("Odrer.txt");
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
-            } else {
-                System.out.println("");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-    }
-
     public String Getline(int menuNumber) throws IOException {
     String line = Files.readAllLines(Paths.get("C:/Users/Wande/Desktop/Menukort.txt")).get(menuNumber);
     return line;
