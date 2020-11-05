@@ -3,7 +3,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
-    MenuPizza pizza = new MenuPizza();
     filecreator goddag = new filecreator();
     PrintOrdre farvel = new PrintOrdre();
 
@@ -40,6 +39,7 @@ public class Main {
                     break;
                 case 9:
                     System.out.println("Quitting.");
+                    farvel.clearFile();
                     run = false;
                     break;
                 default:
@@ -59,7 +59,5 @@ public class Main {
 
     public void file() throws FileNotFoundException {
         goddag.filereader();
-        goddag.filestat();
-        goddag.fileOdre();
     }
 }
