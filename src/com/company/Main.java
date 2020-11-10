@@ -5,12 +5,14 @@ import java.io.IOException;
 public class Main {
     filecreator goddag = new filecreator();
     PrintOrdre farvel = new PrintOrdre();
+    Stat godformiddag = new Stat();
 
     void run() throws IOException {
+        godformiddag.loadList();
         String headerText = "Marios Pizza:"; // Text to print ABOVE menu
         String leadText = "Please choose on of the following options: "; // Lead text to print when asking user to make choice
         // Array of menu items:
-        String[] menuItems = { "1. Choose ONE", "2. Choose TWO", "3. Choose THREE", "9. QUIT" };
+        String[] menuItems = { "1. Order Pizza", "2. Print current orders", "3. Show Statistics ", "9. QUIT" };
         boolean run = true; // Don't change!
         int choice = -1; // Don't change!
         while (run) {
@@ -22,24 +24,26 @@ public class Main {
             switch (choice) {
                 case 1:
                     file();
-                    System.out.println("Choose one pizza");
+                    System.out.println("Choose Desired pizza");
                     int menuNumber = menu.readChoice();
                     farvel.writeOrdrer(menuNumber);
+                    String mb = String.valueOf(menuNumber);
+                    godformiddag.statistikCounter(mb);
+                    godformiddag.prisSamler(mb);
                     break;
                 case 2:
-                    System.out.println("You chose 2. Pizza menu");
-                    // pizza menu
+                    System.out.println("Heres you current orders");
+                    farvel.Readorder();
                     break;
                 case 3:
                     System.out.println("Hey Mario, Heres your statistics");
-                    //statistic
-                    break;
-                case 4:
-                    farvel.Readorder();
+                    godformiddag.Printall();
+                    System.out.println("Omsøtning" + godformiddag.omsætning());
                     break;
                 case 9:
                     System.out.println("Quitting.");
                     farvel.clearFile();
+                    godformiddag.saveList();
                     run = false;
                     break;
                 default:

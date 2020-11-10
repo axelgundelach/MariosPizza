@@ -3,15 +3,17 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Date;
+import java.util.Scanner;
 
 
 public class  PrintOrdre {
-
     filecreator nummer = new filecreator();
 
     public void writeOrdrer(int menuNumber) throws IOException {
         Writer output = new BufferedWriter(new FileWriter("Ordrer.txt",true));
-            output.append("\n" + nummer.Getline(menuNumber));
+            output.append("\n_______________________________________________________");
+            output.append("\n" + Timeoforder() + "\n" + nummer.Getline(menuNumber));
             output.close();
     }
 
@@ -19,19 +21,24 @@ public class  PrintOrdre {
         PrintWriter writer = new PrintWriter("Ordrer.txt");
         writer.print("");
         writer.close();
+
     }
 
-   public void Readorder() {
+    public String Timeoforder(){
+            Date date = new Date();
+        System.out.println("Date of purchase: " + date);
+        return "Date of purchase: " + date;
+
+    }
+
+   public void Readorder() throws FileNotFoundException {
         // make for sentence :D
-            int n =0 ; // The line number
-            try{
-                String line = Files.readAllLines(Paths.get("Ordrer.txt")).get(n);
-                System.out.println(line);
-                n++;
-            }
-            catch(IOException e){
-                System.out.println(e);
-            }
-        }
+       File file = new File("Ordrer.txt");
+       Scanner scan = new Scanner(file);
+       while(scan.hasNextLine()){
+           System.out.println(scan.nextLine());
+       }
+    }
+
     }
 
