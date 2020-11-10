@@ -52,9 +52,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Main main = new Main();
         main.file();
-
         main.run();
-
     }
 
     public void file() throws FileNotFoundException {
