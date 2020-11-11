@@ -55,7 +55,7 @@ public class Stat {
         return "kunne ikke finde pizzaen";
     }
 
-   public String prisSamler(String menuNumber) {
+    public String prisSamler(String menuNumber) {
         for (Pizza pizza : stat) {
             String mb = String.valueOf(pizza.getMenuNumber());
             if (menuNumber.compareTo(mb) == 0) {
@@ -83,15 +83,14 @@ public class Stat {
         for (Pizza pizza : stat)
             System.out.println(pizza);
     }
-    public int omsætning() {
-        for (Pizza pizza : stat) {
-            int a = Integer.parseInt(pizza.getPris());
-            int sum = 0;
-            for (int i = 0; i < stat.size(); i++)
-                a += i;
-            return sum;
-        }
-        return 0;
-    }
 
+    public void omsætning() {
+            int sum = 0;
+        for (int i = 0; i < stat.size(); i++ ) {
+            Pizza p = stat.get(i);
+            int a = Integer.parseInt(p.getPris());
+            sum += a;
+        }
+        System.out.println("Omsætning: " + sum);
+    }
 }

@@ -38,7 +38,8 @@ public class Main {
                 case 3:
                     System.out.println("Hey Mario, Heres your statistics");
                     godformiddag.Printall();
-                    System.out.println("Omsøtning" + godformiddag.omsætning());
+                    System.out.println("Omsætning");
+                    godformiddag.omsætning();
                     break;
                 case 9:
                     System.out.println("Quitting.");
