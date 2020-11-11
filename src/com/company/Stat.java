@@ -7,10 +7,12 @@ import java.util.Scanner;
 public class Stat {
     ArrayList<Pizza> stat = new ArrayList<>();
     private final String FILENAME = "C:/Users/Wande/Desktop/Statistik.txt";
-
+    private int PRIS50 = 50;
+    private int PRIS60 = 60;
+    private int PRIS70 = 70;
+    private int COUNTER = 1;
     public void loadList() {
         ArrayList<Pizza> pizzaFromFile = new ArrayList<>();
-        Pizza p;
         try {
             Scanner fileReader = new Scanner(new File(FILENAME));
             while (fileReader.hasNext()) {
@@ -45,11 +47,11 @@ public class Stat {
 
     public String statistikCounter(String menuNumber) {
         for (Pizza pizza : stat) {
-            Integer num = Integer.valueOf(pizza.getPizzacount());
+            Integer pizzaAmount = Integer.valueOf(pizza.getPizzacount());
             if (menuNumber.compareTo(pizza.getMenuNumber()) == 0) {
-                int newCounter = num + 1;
-                String lol = String.valueOf(newCounter);
-                return pizza.setPizzacount(lol);
+                int newCounter = pizzaAmount + COUNTER;
+                String totalPizza = String.valueOf(newCounter);
+                return pizza.setPizzacount(totalPizza);
             }
         }
         return "kunne ikke finde pizzaen";
@@ -62,17 +64,17 @@ public class Stat {
                 Integer num = Integer.valueOf(pizza.getPris());
                 int i = Integer.parseInt(menuNumber);
                 if (i <= 10) {
-                    int totalSoldPizza = num + 50;
-                    String Giderikkemere = String.valueOf(totalSoldPizza);
-                    return pizza.setPris(Giderikkemere);
+                    int total = num + PRIS50;
+                    String totalS = String.valueOf(total);
+                    return pizza.setPris(totalS);
                 } else if (i <= 20) {
-                    int totalSoldPizza = num + 60;
-                    String Giderikkemere = String.valueOf(totalSoldPizza);
-                    return pizza.setPris(Giderikkemere);
+                    int total = num + PRIS60;
+                    String totalS = String.valueOf(total);
+                    return pizza.setPris(totalS);
                 } else if (i <= 30) {
-                    int totalSoldPizza = num + 70;
-                    String Giderikkemere = String.valueOf(totalSoldPizza);
-                    return pizza.setPris(Giderikkemere);
+                    int total = num + PRIS70;
+                    String totalS = String.valueOf(total);
+                    return pizza.setPris(totalS);
                 }
             }
         }

@@ -3,12 +3,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
-    filecreator goddag = new filecreator();
-    PrintOrdre farvel = new PrintOrdre();
-    Stat godformiddag = new Stat();
+    pizzaFileReader pizzaMenu = new pizzaFileReader();
+    PrintOrdre printOrdre = new PrintOrdre();
+    Stat stat = new Stat();
 
     void run() throws IOException {
-        godformiddag.loadList();
+        stat.loadList();
         String headerText = "Marios Pizza:"; // Text to print ABOVE menu
         String leadText = "Please choose on of the following options: "; // Lead text to print when asking user to make choice
         // Array of menu items:
@@ -26,25 +26,24 @@ public class Main {
                     file();
                     System.out.println("Choose Desired pizza");
                     int menuNumber = menu.readChoice();
-                    farvel.writeOrdrer(menuNumber);
+                    printOrdre.writeOrdrer(menuNumber);
                     String mb = String.valueOf(menuNumber);
-                    godformiddag.statistikCounter(mb);
-                    godformiddag.prisSamler(mb);
+                    stat.statistikCounter(mb);
+                    stat.prisSamler(mb);
                     break;
                 case 2:
                     System.out.println("Heres you current orders");
-                    farvel.Readorder();
+                    printOrdre.Readorder();
                     break;
                 case 3:
                     System.out.println("Hey Mario, Heres your statistics");
-                    godformiddag.Printall();
-                    System.out.println("Omsætning");
-                    godformiddag.omsætning();
+                    stat.Printall();
+                    stat.omsætning();
                     break;
                 case 9:
                     System.out.println("Quitting.");
-                    farvel.clearFile();
-                    godformiddag.saveList();
+                    printOrdre.clearFile();
+                    stat.saveList();
                     run = false;
                     break;
                 default:
@@ -61,6 +60,6 @@ public class Main {
     }
 
     public void file() throws FileNotFoundException {
-        goddag.filereader();
+        pizzaMenu.filereader();
     }
 }

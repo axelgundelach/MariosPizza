@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class  PrintOrdre {
-    filecreator nummer = new filecreator();
+    pizzaFileReader nummer = new pizzaFileReader();
 
     public void writeOrdrer(int menuNumber) throws IOException {
         Writer output = new BufferedWriter(new FileWriter("Ordrer.txt",true));
@@ -32,7 +32,6 @@ public class  PrintOrdre {
     }
 
    public void Readorder() throws FileNotFoundException {
-        // make for sentence :D
        File file = new File("Ordrer.txt");
        Scanner scan = new Scanner(file);
        while(scan.hasNextLine()){

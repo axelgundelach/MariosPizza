@@ -7,7 +7,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class filecreator {
+public class pizzaFileReader {
+
+    /**
+     *
+     * @throws FileNotFoundException
+     *
+     */
+
 
 public void filereader() throws FileNotFoundException {
     File file = new File("C:/Users/Wande/Desktop/Menukort.txt");
@@ -16,6 +23,13 @@ public void filereader() throws FileNotFoundException {
         System.out.println(scan.nextLine());
     }
 }
+
+    /**
+     *
+     * @param menuNumber
+     * @return
+     * @throws IOException
+     */
 
     public String Getline(int menuNumber) throws IOException {
     String line = Files.readAllLines(Paths.get("C:/Users/Wande/Desktop/Menukort.txt")).get(menuNumber);
