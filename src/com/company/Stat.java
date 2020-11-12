@@ -11,6 +11,12 @@ public class Stat {
     private int PRIS60 = 60;
     private int PRIS70 = 70;
     private int COUNTER = 1;
+
+    /**
+     * Creates arraylist
+     * Adds elements into arraylist
+     * Uses Try & catch to prevent error
+     */
     public void loadList() {
         ArrayList<Pizza> pizzaFromFile = new ArrayList<>();
         try {
@@ -29,6 +35,12 @@ public class Stat {
         }
     }
 
+    /**
+     * Creates a PrintStream
+     * Try & catch to prevent error
+     * For loop iterate arraylist index
+     * Takes four elements from arraylist and prints into file
+     */
     void saveList() {
         try {
             PrintStream outFile = new PrintStream(new File(FILENAME));
@@ -45,6 +57,12 @@ public class Stat {
         }
     }
 
+    /**
+     * Method used for stats
+     * @param menuNumber String that contains readChoice
+     * readChoice is what pizza user chose between 0-29
+     * @return returns +1 into the arraylist
+     */
     public String statistikCounter(String menuNumber) {
         for (Pizza pizza : stat) {
             Integer pizzaAmount = Integer.valueOf(pizza.getPizzacount());
@@ -57,6 +75,11 @@ public class Stat {
         return "kunne ikke finde pizzaen";
     }
 
+    /**
+     * Method that uses price index in array
+     * @param menuNumber Contains readChoice
+     * @return adds price index from pizza into arraylist
+     */
     public String prisSamler(String menuNumber) {
         for (Pizza pizza : stat) {
             String mb = String.valueOf(pizza.getMenuNumber());
@@ -86,6 +109,10 @@ public class Stat {
             System.out.println(pizza);
     }
 
+    /**
+     * Method used for stats
+     * prints total price index from arraylist
+     */
     public void omsætning() {
             int sum = 0;
         for (int i = 0; i < stat.size(); i++ ) {
