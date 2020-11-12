@@ -7,6 +7,12 @@ public class Main {
     PrintOrdre printOrdre = new PrintOrdre();
     Stat stat = new Stat();
 
+    /**
+     * Method that runs the menu
+     * Uses a boolean to keep running
+     * Switch case to run user interface
+     * @throws IOException
+     */
     void run() throws IOException {
         stat.loadList();
         String headerText = "Marios Pizza:"; // Text to print ABOVE menu
@@ -53,12 +59,23 @@ public class Main {
         }
     }
 
+    /**
+     * Main method
+     * Runs the program
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         Main main = new Main();
         main.file();
         main.run();
     }
 
+    /**
+     * Method that prints out the file
+     * File contains all the pizzas on the menu
+     * @throws FileNotFoundException
+     */
     public void file() throws FileNotFoundException {
         pizzaMenu.filereader();
     }
