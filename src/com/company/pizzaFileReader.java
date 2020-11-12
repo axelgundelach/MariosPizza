@@ -17,7 +17,7 @@ public class pizzaFileReader {
 
 
 public void filereader() throws FileNotFoundException {
-    File file = new File("C:/Users/Wande/Desktop/Menukort.txt");
+    File file = new File("/Users/bruger/Desktop/Mario's pizza projekt/Menukort.txt");
     Scanner scan = new Scanner(file);
     while(scan.hasNextLine()){
         System.out.println(scan.nextLine());
@@ -32,7 +32,7 @@ public void filereader() throws FileNotFoundException {
      */
 
     public String Getline(int menuNumber) throws IOException {
-    String line = Files.readAllLines(Paths.get("C:/Users/Wande/Desktop/Menukort.txt")).get(menuNumber);
+    String line = Files.readAllLines(Paths.get("/Users/bruger/Desktop/Mario's pizza projekt/Menukort.txt")).get(menuNumber);
     return line;
     }
 }
