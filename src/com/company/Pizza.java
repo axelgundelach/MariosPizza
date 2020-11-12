@@ -1,12 +1,17 @@
 package com.company;
 
+
+
 public class Pizza {
 
         String pizza;
         String menuNumber;
         String pizzacount;
         String pris;
-
+    /**
+     * Class that creates the object pizza
+     * Constructor with 4 parameters
+     */
         public Pizza(String menuNumber, String pizza, String pris, String pizzacount){
             this.pizza = pizza;
             this.menuNumber = menuNumber;
@@ -40,7 +45,12 @@ public class Pizza {
             return pizzacount;
         }
 
-        public String toString(){
+    /**
+     * ToString method
+     * @return the constructor in string format
+     */
+
+    public String toString(){
             return this.menuNumber + ". " + this.pizza + ".   Pris:" + this.pris + ".   Antal pizza købt:" + this.pizzacount;
         }
     }
