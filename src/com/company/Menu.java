@@ -1,17 +1,25 @@
 package com.company;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
         private String menuHeader;
         private String leadText;
         private String[] menuItems;
-
+    /**
+     * Constuctor
+     * @param menuHeader
+     * @param leadText
+     * @param menuItems
+     */
         public Menu(String menuHeader, String leadText, String[] menuItems) {
             this.menuHeader = menuHeader;
             this.leadText = leadText;
             this.menuItems = menuItems;
         }
-
+    /**
+     * Method that prints the menu
+     */
         public void printMenu() {
             String printString = menuHeader + "\n";
 
@@ -19,7 +27,11 @@ public class Menu {
                 printString += menuItems[i] + "\n";
             System.out.println("\n" + printString);
         }
-
+    /**
+     * Method that read the choices of the menu
+     * Uses a boolean to keep running
+     * Uses a scanner to scan the next line in the menu
+     */
         public int readChoice() {
             Scanner scanner = new Scanner(System.in);
             boolean validChoice = false;

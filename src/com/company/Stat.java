@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Stat {
     ArrayList<Pizza> stat = new ArrayList<>();
-    private final String FILENAME = "C:/Users/Wande/Desktop/Statistik.txt";
+    private final String FILENAME = "/Users/bruger/Desktop/Mario's pizza projekt/Statistik.txt";
     private int PRIS50 = 50;
     private int PRIS60 = 60;
     private int PRIS70 = 70;
