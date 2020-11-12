@@ -10,9 +10,10 @@ import java.util.Scanner;
 public class pizzaFileReader {
 
     /**
-     *
+     *Method that reads an txt file through while loop
      * @throws FileNotFoundException
-     *
+     * Scanner thats scan through the file
+     * while loop that scans file until theres no more lines
      */
 
 
@@ -27,7 +28,7 @@ public void filereader() throws FileNotFoundException {
     /**
      *
      * @param menuNumber
-     * @return
+     * @returns A specific line from txt file
      * @throws IOException
      */
 
